@@ -55,7 +55,7 @@ async function avviaStampa() {
     let linkPianetaPG = singoloPG.homeworld;
 
     let pianetaPG = linkPianetaPG.slice(-3, -1).match(/(\d+)/)[0];
-    pgDescr.innerHTML = `${singoloPG.name} dal pianeta ${planets[pianetaPG]}`;
+    pgDescr.innerHTML = `${singoloPG.name} dal pianeta ${planets[pianetaPG - 1]}`;
     document.getElementById("pg-list").appendChild(pgDescr);
   });
   loadingBtn.classList.add("hidden");
